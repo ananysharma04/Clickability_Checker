@@ -1181,7 +1181,7 @@ class ClickableElementTester:
             
             # Scroll element into view
             self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element)
-            time.sleep(2)
+            time.sleep(1)
             
             # Check if element is still clickable
             if not (element.is_displayed() and element.is_enabled()):
@@ -1480,9 +1480,8 @@ class ClickableElementTester:
 
 def main():
     """Main function to run the concurrent clickable element tester"""
-    test_url = "https://www.bajajfinserv.in/personal-loan"
+    test_url = "https://www.bajajfinserv.in/gold-loan"
     # test_url = "https://cont-sites.bajajfinserv.in/personal-loan"
-    
     
     try:
         # Initialize with 3 concurrent workers
